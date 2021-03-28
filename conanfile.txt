@@ -1,0 +1,24 @@
+[build_requires]
+cmake/3.19.7 
+
+[requires]
+swffgdice/0.1@insanefactory/stable
+qt/6.0.1@bincrafters/stable
+ms-gsl/3.1.0
+
+[generators]
+cmake
+
+[options]
+qt:qtsvg=True
+qt:qtdeclarative=True
+qt:qtquickcontrols2=True
+
+[imports]
+lib, *.so.* -> bin
+lib, *.so -> bin
+bin, *.dll -> bin
+lib, *.dylib* -> bin
+
+plugins, * -> bin/qt-plugins @ root_package=Qt
+qml, * -> bin/qt-qml @ root_package=Qt

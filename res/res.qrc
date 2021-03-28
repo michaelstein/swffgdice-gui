@@ -1,0 +1,28 @@
+<RCC>
+	<qresource>
+		<file>img/ability_dec.png</file>
+		<file>img/ability_inc.png</file>
+		<file>img/boost_dec.png</file>
+		<file>img/boost_inc.png</file>
+		<file>img/challenge_dec.png</file>
+		<file>img/challenge_inc.png</file>
+		<file>img/difficulty_dec.png</file>
+		<file>img/difficulty_inc.png</file>
+		<file>img/force_dec.png</file>
+		<file>img/force_inc.png</file>
+		<file>img/proficiency_dec.png</file>
+		<file>img/proficiency_inc.png</file>
+		<file>img/setback_dec.png</file>
+		<file>img/setback_inc.png</file>
+		<file>img/success.png</file>
+		<file>img/advantage.png</file>
+		<file>img/triumph.png</file>
+		<file>img/failure.png</file>
+		<file>img/threat.png</file>
+		<file>img/despair.png</file>
+		<file>img/light.png</file>
+		<file>img/dark.png</file>
+		<file>ui/App.qml</file>
+		<file>ui/ValueRow.qml</file>
+	</qresource>
+</RCC>

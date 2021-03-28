@@ -1,0 +1,16 @@
+build/
+build_release/
+build_debug/
+build_win_x64/
+build_win_x86/
+build_linux/
+build_linux/
+_build/
+install/
+CMakeLists.txt.user
+*~
+__pycache__
+*.sublime-workspace
+.vs
+*.suo
+*.sdf
