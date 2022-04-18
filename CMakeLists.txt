@@ -15,24 +15,17 @@ endif(WIN32)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Include Conan build files
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup(TARGETS)
-
 # global include settings
 include_directories(${PROJECT_SOURCE_DIR}/src)
-include_directories(${CONAN_INCLUDE_DIRS_GSL_MICROSOFT})
+include_directories(${CONAN_INCLUDE_DIRS_MS-GSL})
 
 # Qt6
+find_package(Qt6 COMPONENTS Quick REQUIRED CONFIG)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOUIC OFF)
 
-find_package(Qt6 COMPONENTS
-	#Widgets REQUIRED
-	Quick REQUIRED
-	QuickControls2 REQUIRED
-)
+find_package(swffgdice REQUIRED CONFIG)
 
 # Source
 file(GLOB_RECURSE headers src/*.h)
@@ -77,10 +70,10 @@ add_executable(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-	#PRIVATE Qt6::Widgets
+	#PRIVATE Qt6::Gui
 	PRIVATE Qt6::Quick
 	PRIVATE Qt6::QuickControls2
-	PRIVATE CONAN_PKG::swffgdice
+	PRIVATE swffgdice::swffgdice
 )
 
 #set_target_properties(${PROJECT_NAME} PROPERTIES
